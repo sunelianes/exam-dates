@@ -13,8 +13,8 @@ public class UibExamDateFinder extends ExamDateFinder {
     }
 
     @Override
-    public String findExamDate() {
-        return getExamElem().text();
+    public String getExamDate() {
+        return findExamElem().text();
     }
 
 
@@ -24,7 +24,7 @@ public class UibExamDateFinder extends ExamDateFinder {
     }
 
     @Override
-    public Element getExamElem() {
+    public Element findExamElem() {
         try {
             return doc.select("dt:contains(Date)").first().nextElementSibling();
         }

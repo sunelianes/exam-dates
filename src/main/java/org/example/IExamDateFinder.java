@@ -4,7 +4,7 @@ import org.jsoup.nodes.Element;
 
 
 public interface IExamDateFinder {
-    String findExamDate();
+    String getExamDate();
     String getTitle();
-    Element getExamElem();
+    Element findExamElem();
 }
