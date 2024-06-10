@@ -1,17 +1,38 @@
 package org.example;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+
 import java.util.Scanner;
 
-public class UibExamDateFinder implements IExamDateFinder {
-    @Override
-    public String findExamDate(String url) {
-        return "";
+public class UibExamDateFinder extends ExamDateFinder {
+    private final String baseURL = "https://www4.uib.no/en/courses/";
+    private final Document doc;
+
+    public UibExamDateFinder() {
+        String url = baseURL + getSubjectCode();
+        this.doc = connect(url);
     }
 
     @Override
-    public String getSubjectCode() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter subject code: ");
-        return scanner.nextLine();
+    public String findExamDate() {
+        return getExamElem().text();
+    }
+
+
+    @Override
+    public String getTitle() {
+        return doc.title();
+    }
+
+    @Override
+    public Element getExamElem() {
+        try {
+            return doc.select("dt:contains(Date)").first().nextElementSibling();
+        }
+        catch (NullPointerException exception) {
+            return null;
+        }
     }
 }
