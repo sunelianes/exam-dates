@@ -3,6 +3,8 @@ package org.example;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import java.util.List;
+
 public class UibExamDateFinder extends ExamDateFinder {
     private final String baseURL = "https://www4.uib.no/en/courses/";
     private final Document doc;
@@ -31,5 +33,10 @@ public class UibExamDateFinder extends ExamDateFinder {
         catch (NullPointerException exception) {
             return null;
         }
+    }
+
+    @Override
+    public List<String> getExamDateList() {
+        return null;
     }
 }
