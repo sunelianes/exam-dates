@@ -1,10 +1,7 @@
 package org.example;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-
-import java.util.Scanner;
 
 public class UibExamDateFinder extends ExamDateFinder {
     private final String baseURL = "https://www4.uib.no/en/courses/";
