@@ -3,6 +3,7 @@ package org.example;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UibExamDateFinder extends ExamDateFinder {
@@ -33,10 +34,5 @@ public class UibExamDateFinder extends ExamDateFinder {
         catch (NullPointerException exception) {
             return null;
         }
-    }
-
-    @Override
-    public List<String> getExamDateList() {
-        return null;
     }
 }

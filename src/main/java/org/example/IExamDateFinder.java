@@ -9,5 +9,4 @@ public interface IExamDateFinder {
     String getExamDate();
     String getTitle();
     Element findExamElem();
-    List<String> getExamDateList();
 }

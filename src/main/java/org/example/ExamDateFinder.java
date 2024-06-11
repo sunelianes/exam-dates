@@ -14,6 +14,7 @@ public abstract class ExamDateFinder implements IExamDateFinder {
     Document connect(String url) {
         try {return Jsoup.connect(url).get();}
         catch (Exception e) {
+            System.out.println("Invalid URL: " + url);
             return null;
         }
     }
