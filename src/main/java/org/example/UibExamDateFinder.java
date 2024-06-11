@@ -3,9 +3,6 @@ package org.example;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class UibExamDateFinder extends ExamDateFinder {
     private final String baseURL = "https://www4.uib.no/en/courses/";
     private final Document doc;
@@ -32,7 +29,7 @@ public class UibExamDateFinder extends ExamDateFinder {
             return doc.select("dt:contains(Date)").first().nextElementSibling();
         }
         catch (NullPointerException exception) {
-            return null;
+            return new Element("No date found");
         }
     }
 }
