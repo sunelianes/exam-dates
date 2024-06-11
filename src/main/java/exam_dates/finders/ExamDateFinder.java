@@ -7,14 +7,22 @@ import java.util.Scanner;
 
 public abstract class ExamDateFinder implements IExamDateFinder {
     private final Scanner scanner = new Scanner(System.in);
+
     String getYear() {
         System.out.println("Enter year: ");
         return scanner.nextLine();
     }
+
+    String getSemester() {
+        System.out.println("Enter semester (V or H): ");
+        return scanner.nextLine();
+    }
+
     String getSubjectCode() {
         System.out.println("Enter subject code: ");
         return scanner.nextLine();
     }
+
     Document connect(String url) {
         try {return Jsoup.connect(url).get();}
         catch (Exception e) {
@@ -22,7 +30,8 @@ public abstract class ExamDateFinder implements IExamDateFinder {
             return null;
         }
     }
-    // refactor out ?
+
+    // refactor out ? probably yes, due to static method in non static contexts
     public static IExamDateFinder newFinder() {
         System.out.println("Enter school ID: ");
         String schoolID = new Scanner(System.in).nextLine();

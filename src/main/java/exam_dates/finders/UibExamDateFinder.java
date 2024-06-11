@@ -5,10 +5,11 @@ import org.jsoup.nodes.Element;
 
 public class UibExamDateFinder extends ExamDateFinder {
     private final String baseURL = "https://www4.uib.no/en/courses/";
+    private final String endOfURL = "?start_semester=";
     private final Document doc;
 
     UibExamDateFinder() {
-        String url = baseURL + getSubjectCode();
+        String url = baseURL + getSubjectCode() + endOfURL + getYear() + getSemester() ;
         this.doc = connect(url);
     }
 
