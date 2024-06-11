@@ -1,23 +1,25 @@
 # exam-dates
 
+Built with java using Jsoup to webscrape. Currently supporting written exams on UIB and NTNU
+
 Check previous and current exam dates by writing in your school ID, year of the exam and semester of the exam.
 For example:
 
 Enter school ID: 
 
-UIB
+>>> UIB
 
 Enter subject code: 
 
-INF122
+>>> INF122
 
 Enter year: 
 
-2023
+>>> 2023
 
 Enter semester (V or H): 
 
-H
+>>> H
 
 Output:
 
