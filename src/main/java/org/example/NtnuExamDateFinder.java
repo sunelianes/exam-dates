@@ -8,7 +8,7 @@ public class NtnuExamDateFinder extends ExamDateFinder {
     private final String endOfURL = "#tab=omEksamen";
     private final Document doc;
 
-    public NtnuExamDateFinder() {
+    NtnuExamDateFinder() {
         String url = baseURL + getSubjectCode() + endOfURL;
         this.doc = connect(url);
     }

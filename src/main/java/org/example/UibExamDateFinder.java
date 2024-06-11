@@ -7,7 +7,7 @@ public class UibExamDateFinder extends ExamDateFinder {
     private final String baseURL = "https://www4.uib.no/en/courses/";
     private final Document doc;
 
-    public UibExamDateFinder() {
+    UibExamDateFinder() {
         String url = baseURL + getSubjectCode();
         this.doc = connect(url);
     }
