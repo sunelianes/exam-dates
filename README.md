@@ -7,19 +7,19 @@ For example:
 
 Enter school ID: 
 
->>> UIB
+\>>> UIB
 
 Enter subject code: 
 
->>> INF122
+\>>> INF122
 
 Enter year: 
 
->>> 2023
+\>>> 2023
 
 Enter semester (V or H): 
 
->>> H
+\>>> H
 
 Output:
 
