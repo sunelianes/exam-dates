@@ -2,7 +2,6 @@ package exam_dates;
 
 import exam_dates.finders.ExamDateFinder;
 import exam_dates.finders.IExamDateFinder;
-import exam_dates.finders.NtnuExamDateFinder;
 
 public class Main {
     public static void main(String[] args) {
