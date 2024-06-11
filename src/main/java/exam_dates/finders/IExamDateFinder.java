@@ -1,4 +1,4 @@
-package org.example;
+package exam_dates.finders;
 
 import org.jsoup.nodes.Element;
 

@@ -1,4 +1,4 @@
-package org.example;
+package exam_dates.finders;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -17,6 +17,17 @@ public abstract class ExamDateFinder implements IExamDateFinder {
             System.out.println("Invalid URL: " + url);
             return null;
         }
+    }
+    // refactor out ?
+    public static IExamDateFinder newFinder() {
+        System.out.println("Enter school ID: ");
+        String schoolID = new Scanner(System.in).nextLine();
+
+        return switch(schoolID) {
+            case "UIB" -> new UibExamDateFinder();
+            case "NTNU" -> new NtnuExamDateFinder();
+            default -> throw new IllegalArgumentException("Invalid school ID: " + schoolID);
+        };
     }
 
 }
