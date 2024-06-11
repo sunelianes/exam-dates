@@ -3,6 +3,7 @@
 Built with java using Jsoup to webscrape. Currently supporting written exams on UIB and NTNU
 
 Check previous and current exam dates by writing in your school ID, subject code, year of the exam and semester of the exam.
+
 For example:
 
 Enter school ID: 
