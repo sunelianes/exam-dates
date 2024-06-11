@@ -6,8 +6,12 @@ import org.jsoup.nodes.Document;
 import java.util.Scanner;
 
 public abstract class ExamDateFinder implements IExamDateFinder {
+    private final Scanner scanner = new Scanner(System.in);
+    String getYear() {
+        System.out.println("Enter year: ");
+        return scanner.nextLine();
+    }
     String getSubjectCode() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter subject code: ");
         return scanner.nextLine();
     }

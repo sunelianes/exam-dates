@@ -9,7 +9,7 @@ public class NtnuExamDateFinder extends ExamDateFinder {
     private final Document doc;
 
     NtnuExamDateFinder() {
-        String url = baseURL + getSubjectCode() + endOfURL;
+        String url = baseURL + getSubjectCode() + "/" + getYear() + endOfURL;
         this.doc = connect(url);
     }
 
