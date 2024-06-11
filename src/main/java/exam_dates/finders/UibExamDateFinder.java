@@ -9,7 +9,7 @@ public class UibExamDateFinder extends ExamDateFinder {
     private final Document doc;
 
     UibExamDateFinder() {
-        String url = baseURL + getSubjectCode() + endOfURL + getYear() + getSemester() ;
+        String url = baseURL + getSubjectCode() + endOfURL + getYear() + getSemester();
         this.doc = connect(url);
     }
 

@@ -31,16 +31,4 @@ public abstract class ExamDateFinder implements IExamDateFinder {
         }
     }
 
-    // refactor out ? probably yes, due to static method in non static contexts
-    public static IExamDateFinder newFinder() {
-        System.out.println("Enter school ID: ");
-        String schoolID = new Scanner(System.in).nextLine();
-
-        return switch(schoolID) {
-            case "UIB" -> new UibExamDateFinder();
-            case "NTNU" -> new NtnuExamDateFinder();
-            default -> throw new IllegalArgumentException("Invalid school ID: " + schoolID);
-        };
-    }
-
 }
